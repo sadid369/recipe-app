@@ -39,6 +39,7 @@ const Form = ({
   );
 };
 
+// https://recipe-server-7a0g.onrender.com
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -47,7 +48,7 @@ const SignUp = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:5000/auth/signup", {
+      await axios.post("https://recipe-server-7a0g.onrender.com/auth/signup", {
         username,
         password,
       });
@@ -81,7 +82,7 @@ const SignIn = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/auth/signin", {
+      const response = await axios.post("https://recipe-server-7a0g.onrender.com/auth/signin", {
         username,
         password,
       });
